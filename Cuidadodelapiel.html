@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inicia Sesión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    /* Variables de color */
+    :root {
+      --color-primario: #0B036B;
+      --color-secundario: #FF8533;
+      --color-banner: #007bff;
+      --color-fondo: #f8f9fa;
+      --color-texto: #333;
+      --color-hover: #f56f3a;
+    }
+
+    /* Encabezado fijo */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      background: var(--color-primario);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+    }
+
+    /* Espaciado para evitar solapamiento */
+    body {
+      padding-top: 140px;
+    }
+
+    /* Estilo del encabezado */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .wrapper {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    /* Logo y texto en columna, centrados */
+    header .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo img {
+      max-height: 60px;
+      width: auto;
+    }
+
+    /* Texto "FLM" */
+    .logo .nombre-logo {
+      color: orange;
+      margin-top: 8px;
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--color-secundario);
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--color-hover);
+      border-radius: 25px;
+      color: #fff;
+    }
+
+    /* Responsive header */
+    @media screen and (max-width: 950px) {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      .logo img {
+        max-height: 50px;
+      }
+    }
+
+    /* Estilos para la sección de productos */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .producto {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 200px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .producto:hover {
+      transform: scale(1.05);
+    }
+    .producto img {
+      width: 100%;
+      height: auto;
+    }
+    .descripcion {
+      padding: 10px;
+    }
+    .precio {
+      color: #e60000;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="IMAGENES/logos/logo/logo1.jpg" alt="Logo" />
+        <div class="nombre-logo">FLM</div>
+      </div>
+      <nav>
+        <a href="Index.html">Inicio</a>
+        <a href="Ofertas.html">Ofertas</a>
+        <a href="Destacados.html">Destacados</a>
+        <a href="Cuidadodelapiel.html">Cuidado de la piel</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main style="padding:20px;">
+    <h2 style="text-align:center; margin-bottom:20px;">Proteccion y Cuidado de la piel</h2>
+    <div class="productos" id="productosContainer">
+      <!-- Aquí se cargarán los productos vía JS -->
+    </div>
+  </main>
+
+	
+	<!-- Sección inferior con id "contacto" -->
+  <section id="contacto" style="padding:20px;">
+    <h2>¡Conoce más sobre Farmacia la Milagrosa!</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+      <div class="card" style="width:250px;">
+        <h5>Promociones y Actividades</h5>
+        <p>www.milagrosa.com cuenta con las siguientes condiciones generales: Aplica a máximo 4 unidades por referencia, por compra. Sujeto a disponibilidad de productos. Descuento no acumulable con otras ofertas y/o promociones. Descuento válido a nivel nacional en www.lamilagrosa.com Los precios ofrecidos en www.milagrosa.com son diferentes a los de los establecimientos.</p>
+      </div>
+      <div class="card" style="width:250px;">
+        <h5>¿Quiénes Somos?</h5>
+        <p>¡Hola, bienvenido Farmacia la Milagrosa online las 24 horas más cerca de ti! entregamos tu pedido lo más pronto posible. Contamos con la Milagrosa encontrarás una gran variedad de productos para el bebé, medicamentos, medicamentos naturales, aseo personal, alimentos, bebidas, belleza y dermatologica, para que compres sin salir de casa.</p>
+      </div>
+      <div class="card" style="width:250px;">
+        <h5>¿No puedes hacer tu pedido?</h5>
+        <p>¡Nosotros te ayudamos! Llámanos a nuestra línea de atención nacional 'Solo para ventas' +58 414 5545555. Envíame un mensaje en WhatsApp.</p>
+      </div>
+      <div class="card" style="width:250px;">
+        <h5>Para sentirte bien y vivir mejor</h5>
+        <p>Tenemos una mente tan maravillosa que la podemos entrenar para conseguir que sea nuestra mejor aliada en aquello que nos proponemos. Entrenar tu mente para tener una vida con más calma y serenidad. "Creo en el potencial humano y en nuestra capacidad para lograr la vida de nuestros sueños." Lourdes Balestra..</p>
+      </div>
+    </div>
+  </section>
+	
+  <!-- Pie de página -->
+  <footer style="background-color: var(--color-primario); color: white; text-align:center; padding:10px;">
+    © 2024 Farmacia la Milagrosa. Todos los derechos reservados.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Definimos los productos
+    const productosAdicionales = [
+      {
+        nombre: "Solyl syndet",
+        descripcion: "Medicamento para infecciones.",
+        precio: "Bs. 180",
+        img: "IMAGENES/Cuidado de la piel/Soylsyndet_v01.jpg"
+      },
+      {
+        nombre: "Ozinack con color",
+        descripcion: "Para el cuidado de la piel grasa y/o con acné.",
+        precio: "Bs. 150",
+        img: "IMAGENES/Cuidado de la piel/Ozinack_con_color_v01.jpg"
+      },
+      {
+        nombre: "Protector solar Nivea 70 psf",
+        descripcion: "Protector solar con SPF 70 de Nivea.",
+        precio: "Bs. 100",
+        img: "IMAGENES/Cuidado de la piel/nivea70.jpg"
+      },
+      {
+        nombre: "Shampoo Eucerin",
+        descripcion: "Champú para cuidado de la piel sensible.",
+        precio: "Bs. 70",
+        img: "IMAGENES/Cuidado de la piel/eucerinshampoo.jpg"
+      },
+      {
+        nombre: "Cetafil Locion",
+        descripcion: "Loción hidratante para piel sensible.",
+        precio: "Bs. 80",
+        img: "IMAGENES/Cuidado de la piel/cetafil.jpg"
+      },
+      {
+        nombre: "Protector solar Bioderma 100 psf",
+        descripcion: "Protector solar con SPF 100 de Bioderma.",
+        precio: "Bs. 50",
+        img: "IMAGENES/Cuidado de la piel/bioderma.jpg"
+      },
+      {
+        nombre: "Aqualen Plus",
+        descripcion: "Crema hidratante y protector cutáneo.",
+        precio: "Bs. 100",
+        img: "IMAGENES/Cuidado de la piel/Aqualenplus_v01.jpg"
+      },
+      {
+        nombre: "Acid Mantle Locion",
+        descripcion: "Loción para cuidado de la piel.",
+        precio: "Bs. 60",
+        img: "IMAGENES/Cuidado de la piel/acidmantle.jpg"
+      }
+    ];
+
+    // Función para cargar productos en la página
+    function cargarProductos() {
+      const contenedor = document.getElementById("productosContainer");
+      productosAdicionales.forEach(prod => {
+        const div = document.createElement("div");
+        div.className = "producto";
+        div.innerHTML = `
+          <img src="${prod.img}" alt="${prod.nombre}">
+          <div class="descripcion">
+            <h5>${prod.nombre}</h5>
+            <p>${prod.descripcion}</p>
+            <div class="precio">${prod.precio}</div>
+          </div>
+        `;
+        contenedor.appendChild(div);
+      });
+    }
+
+    // Ejecutar cuando la página cargue
+    document.addEventListener("DOMContentLoaded", cargarProductos);
+  </script>
+</body>
+</html>
